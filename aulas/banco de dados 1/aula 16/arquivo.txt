@@ -1,0 +1,31 @@
+CREATE TABLE departamento(
+id_depto SERIAL PRIMARY KEY,
+nome VARCHAR(100) NOT NULL,
+localizacao VARCHAR(50)
+);
+
+CREATE TABLE funcionario(
+id_func SERIAL PRIMARY KEY,
+nome TEXT NOT NULL,
+cargo VARCHAR(50),
+salario DECIMAL(10,2),
+data_contratacao DATE NOT NULL
+);
+
+----------------------------------------
+
+CREATE TABLE usuario(
+e-mail VARCHAR(100) UNIQUE PRIMARY KEY,
+nome_completo VARCHAR(100),
+data_inicio DATE NOT NULL
+);
+
+----------------------------------------
+
+CREATE TABLE produto(
+id_pruduto SERIAL PRIMARY KEY,
+nome VARCHAR(100) NOT NULL,
+valor_venda DECIMAL(10,2),
+estoque BOOLEAN
+);
+

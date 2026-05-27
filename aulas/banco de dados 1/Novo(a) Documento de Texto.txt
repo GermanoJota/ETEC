@@ -1,0 +1,38 @@
+CREATE TABLE paciente (
+id_paciente SERIAL PRIMARY KEY,
+nome VARCHAR(100),
+data_nascimento DATE
+);
+
+
+
+
+
+
+CREATE TABLE quarto (
+id_quarto INT PRIMARY KEY,
+numero INT
+);
+CREATE TABLE paciente (
+id_paciente SERIAL PRIMARY KEY,
+id_quarto INT REFERENCES quarto(id_quarto),
+nome VARCHAR(100)
+);
+
+
+
+
+
+CREATE TABLE medico (
+crm INT PRIMARY KEY,
+nome VARCHAR(100)
+);
+CREATE TABLE paciente (
+cpf INT PRIMARY KEY,
+nome VARCHAR(100)
+);
+CREATE TABLE consulta (
+diagnostico VARCHAR(100) PRIMARY KEY,
+crm INT REFERENCES medico(crm),
+cpf INT REFERENCES paciente(cpf)
+);
